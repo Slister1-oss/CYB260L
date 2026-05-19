@@ -1,0 +1,14 @@
+Resources:
+  Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-79fd7eee
+      InstanceType: t2.micro
+      BlockDeviceMappings:
+        - DeviceName: /dev/sdh
+          Ebs:
+            VolumeSize: 20
+      CpuOptions:
+        CoreCount: 1
+        ThreadsPerCore: 1
+      DisableApiTermination: false
